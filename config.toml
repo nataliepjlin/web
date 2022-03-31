@@ -1,4 +1,4 @@
-baseurl = "https://nataliepjlin.github.io/site"
+baseurl = "https://nataliepjlin.github.io/web"
 metaDataFormat = "yaml"
 title = "UNPLASTIFY"
 theme = "blist"
