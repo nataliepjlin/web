@@ -1,0 +1,80 @@
+baseurl = "https://nataliepjlin.github.io/site"
+metaDataFormat = "yaml"
+title = "UNPLASTIFY"
+theme = "blist"
+
+DefaultContentLanguage = "en"
+DefaultContentLanguageInSubdir = true
+[languages]
+  [languages.en]
+    contentDir = "content/en" #English
+    weight = 1
+    languageName = "English"
+    [languages.en.params]
+      introTitle = "We are UNPLASTIFY"
+      introSubtitle = "我們是一群北一女中的學生<br>我們相信每一片土地和人同樣值得被友善對待"
+      introPhoto = "/up/up_team.jpg"
+      logo = "/up/logo.jpg"
+    [[languages.en.menu.main]]
+        name = "文章"
+        url = "blog"
+        weight = 1
+
+    [[languages.en.menu.main]]
+        name = "關於我們"
+        url = "page/about/"
+        weight = 2
+
+    [[languages.en.menu.main]]
+        name = "標籤"
+        url = "tags"
+        weight = 3
+
+    [[languages.en.menu.main]]
+        name = "最新文章"
+        url = "/blog/emoji-support/"
+        weight = 4
+
+[params]
+  # Enable the darkmode toggle in header
+  darkModeToggle = false
+  
+  # Enable search in header
+  enableSearch = true
+
+  # Custom copyright - optional
+  copyright = "Copyright © 2022 - UNPLASTIFY · All rights reserved"
+  favicon = "/up/favicon.jpg"
+
+  # Color for the intro details and social links block, not applicable for dark mode
+  # Supported values: Any color from TailwindCSS default colors
+  # Reference: https://tailwindcss.com/docs/customizing-colors
+  ascentColor = "bg-blue-100"
+
+  # The page bundle that is shown on the front page
+  frontBundle = "blog"
+
+[params.homepage.social]
+  # Global params xommon for both languages
+  title = "追蹤我們"
+  description = "掌握關於我們的最新訊息!"
+  instagram = "https://instagram.com/"
+  facebook = "https://facebook.com/"
+
+[[menu.main]]
+  name = "關於我們"
+  url = "/about"
+
+[build]
+  writeStats = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    # Enable to include inline HTML
+    unsafe = true
